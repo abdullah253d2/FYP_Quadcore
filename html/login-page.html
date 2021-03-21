@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="../assets/css/bootstrap4.min.css">
+    <link rel="stylesheet" href="../assets/css/fyp-fonts.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title></title>
+</head>
+
+<body class="theme-light">
+        <section class="main pb-5">
+            <div class="p-3 container xs" id="login_container">
+                <h3 class="font20 mb-1 text-dark font-weight-sbold">Login</h3>
+                <form id="login_form" novalidate="novalidate">
+                    <div class="form-group">
+                        <label>Cell Number</label>
+                        <input type="text" class="form-control" name="login_mobile_no" id="login_mobile_no">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="login_password" id="login_password">
+                    </div>
+                    <div class="fixed-bottom container"> 
+                        <div class="py-3 font14 text-center text-default"><a href="javascript:;" class="text-primary" onclick="$('#password_container').css('display','block');$('#login_container').css('display','none');">Forgot Password?</a></div>
+                        <button class="btn btn-primary mt-2 w-100 font14 py-25">Login</button>
+                        <div class="py-3 font14 text-center text-default">Not a member? <a href="#" class="text-primary">Register</a></div>
+                    </div>
+                </form>
+            </div>
+            <div class="p-3 container xs" style="display: none;" id="password_container">
+                <h3 class="font20 mb-1 text-dark font-weight-sbold">Forgot Password</h3>
+                <form id="forget_password_form" novalidate="novalidate">
+                    <div class="form-group">
+                        <label>Cell Number</label>
+                        <input type="text" class="form-control" name="reset_login_mobile_no" id="reset_login_mobile_no">
+                    </div>
+                    <div class="fixed-bottom container">
+                        <button class="btn btn-primary mt-2 w-100 font14 py-25">Reset Password</button>
+                        <div class="py-3 font14 text-center text-default">Already a member? <a href="javascript:;" class="text-primary" onclick="$('#login_container').css('display','block');$('#password_container').css('display','none');">Sign In</a></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="fixed-bottom footer-shadow border-top bg-white">
+            <div class="text-center py-2">
+                Powered By <a href=""><strong>V-MALL</strong></a>
+            </div>
+        </footer>
+        <script src="../assets/js/jquery(3.5.1).slim.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap4.min.js"></script>
+    </body>
+</html>
