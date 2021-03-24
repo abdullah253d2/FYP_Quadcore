@@ -1,0 +1,16 @@
+<script src='js/jquery.guillotine.js'></script>
+  <script type='text/javascript'>
+    jQuery(function() {
+      var picture = $('#rotate_picture');
+      picture.one('load', function(){
+        picture.guillotine({eventOnChange: 'guillotinechange'});
+        picture.guillotine('fit');
+        $('#rotate_left').click(function(){ picture.guillotine('rotateLeft');picture.guillotine('fit'); });
+        picture.on('guillotinechange', function(ev, data, action) {
+          data.scale = parseFloat(data.scale.toFixed(4));
+          for(var k in data) { $('#'+k).html(data[k]); }
+        });
+      });
+      if (picture.prop('complete')) picture.trigger('load')
+    });
+  </script>
