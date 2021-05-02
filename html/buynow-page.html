@@ -24,7 +24,7 @@
         </div>
         <nav class="navbar flex-wrap navbar-light bg-white shadow-bottom border-top">
             <a class="navbar-brand" href="#"><img class="logo" style="vertical-align: bottom;"
-                    src="../assets/img/logo.jpg" alt=""><span class="ml-3 font-24">V-MALL</span></a>
+                    src="../assets/img/logo.jpg" alt=""><span class="ml-3 font-24">Buzcart</span></a>
             <div class="ml-auto">
                 <a class="ml-3" href="#"
                     onclick="$('.search').removeClass('d-none'); $('.i-search').addClass('d-none');"><i
@@ -605,6 +605,15 @@
                                     <option value="Ziarat">Ziarat</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <select class="form-control custom-select" id="payment_by" name="payment_by">
+                                    <option value="">Payment By</option>
+                                    <option value="cod">COD</option>
+                                    <option value="ibft">IBFT</option>
+                                </select>
+                                <input type="text" placeholder="" name="" id="ibft"
+                                class="form-control mt-2 d-none" value="Transfer Amount to: 6-02-25-20311-714-214171" disabled>
+                            </div>
                             <div class="form-group position-relative" id="">
                                 <a class="position-absolute" href="javascript:;" style="right:10px; top:10px;" id=""><i class="i-close"></i></a>
                                 <textarea class="form-control pr-5" placeholder="Your Delivery Address"
@@ -662,7 +671,7 @@
     <!-- FOOTER START -->
     <footer class="fixed-bottom footer-shadow border-top bg-white">
         <div class="text-center py-2">
-            Powered By <a href=""><strong>V-MALL</strong></a>
+            Powered By <a href=""><strong>Buzcart</strong></a>
         </div>
     </footer>
     <!-- FOOTER ENDS -->
@@ -698,7 +707,7 @@
             </ul>
         </nav>
         <div class="text-center py-2 position-absolute w-100 bg-primary" style=" bottom:0px; color:#a6c0e9;">
-            Powered By <a href="#"> V-Mall
+            Powered By <a href="#"> Buzcart
                 <!-- <img style="width: 65px; height: 18px;"src=""></a> -->
         </div>
     </div>
@@ -722,6 +731,13 @@
     <script src="../assets/js/jquery(3.5.1).slim.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>
     <script src="../assets/js/bootstrap4.min.js"></script>
+    <script>
+        $("#payment_by").change(function(){
+            var check = $("#payment_by").val();
+            if( check === "ibft"){$("#ibft").removeClass('d-none');}
+            else{$("#ibft").addClass('d-none');}
+        });
+    </script>
 </body>
 
 </html>
